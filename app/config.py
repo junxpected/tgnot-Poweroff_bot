@@ -1,6 +1,9 @@
 import os
+from dotenv import load_dotenv
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 DB_URL = "sqlite+aiosqlite:///power_bot.db"
 
 DEFAULT_DAILY_HOUR = 7
